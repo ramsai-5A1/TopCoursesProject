@@ -28,3 +28,19 @@
     height: 250px;
     width: 400px;
 }
+
+.fcLike {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    place-items: center;
+}
+
+.fcLikeButton:hover {
+    background-color: crimson;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+}
