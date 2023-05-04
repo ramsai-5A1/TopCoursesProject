@@ -6,6 +6,8 @@ import './Card.css';
 const Card = ({course}) => {
 
     const [clicked, setClicked] = useState(true);
+    const [readMore, setReadMore] = useState(true);
+    const description = readMore ? course.description.substr(0, 200) + '...' : course.description;
 
     const fcLikeHandler = () => {
         if(clicked) {
@@ -14,6 +16,10 @@ const Card = ({course}) => {
             toast.warning("Like Removed");
         }
         setClicked(!clicked);
+    }
+
+    const readMoreHandler = () => {
+        setReadMore(!readMore);
     }
 
     return (
@@ -29,7 +35,7 @@ const Card = ({course}) => {
 
             <div className="titleDiv">
                 <p className="title">{course.title}</p>
-                <p>{course.description}</p>
+                <p>{ description } <span onClick={readMoreHandler} className='readMoreSpan'>{readMore ? "Read More" : "Show Less"}</span> </p>
             </div>
         </div>
         

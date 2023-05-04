@@ -5,15 +5,16 @@
     column-gap: 20px;
 }
 
-.buttonId {
+.buttonId1 {
     background-color: black;
     color: white;
     border-radius: 10px;
     height: 30px;
     min-width: 60px;
     font-size: medium;
+    cursor: pointer;
 }
 
-.buttonId:hover {
+.buttonId1:hover {
     background-color: darkgray;
 }

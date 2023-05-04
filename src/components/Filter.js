@@ -1,14 +1,19 @@
 import React from "react";
 import './Filter.css';
 
-function Filter({filterData}) {
+function Filter({filterData, category, setCategory}) {
+
+    const buttonHandler = (title) => {
+        setCategory(title);
+    };
+
     return (
         <div className="highLevelDiv">
             {
                 filterData.map((data) => (
-                        <button className="buttonId" key = {data.id}>
+                    <button className="buttonId1" key = {data.id} onClick={() => buttonHandler(data.title)}>
                             {data.title}
-                        </button>
+                    </button>
                 ))
             }
             

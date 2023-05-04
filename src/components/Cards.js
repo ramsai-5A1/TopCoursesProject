@@ -1,16 +1,20 @@
 import Card from './Card';
 import './Cards.css';
 
-function Cards({courses}) {
+function Cards({courses, category}) {
      
     const getCourses = () => { 
         let allCourses = []; 
-        Object.values(courses).forEach((courseCategory) => {
-            courseCategory.forEach((course) => {
-                allCourses.push(course);
+        if(category == "All") {
+            Object.values(courses).forEach((courseCategory) => {
+                courseCategory.forEach((course) => {
+                    allCourses.push(course);
+                })
             })
-        })
-        return allCourses;
+            return allCourses;
+        } else {
+            return courses[category];
+        }
     }
  
 

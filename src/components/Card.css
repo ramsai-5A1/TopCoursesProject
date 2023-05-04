@@ -44,3 +44,8 @@
 .title {
     font-weight: bold;
 }
+
+.readMoreSpan {
+    cursor: pointer;
+    color:aqua
+}
