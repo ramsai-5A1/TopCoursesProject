@@ -1,11 +1,12 @@
 import React from "react";
 import { FcLike } from "react-icons/fc";
+import './Card.css';
 
 const Card = ({course}) => {
     return (
-        <div>
+        <div className="topDiv">
             <div>
-                <img src={course.image.url}></img>
+                <img src={course.image.url} className='image'></img>
                 <div>
                     <button>
                         <FcLike fontSize="1.75rem"/>
@@ -13,7 +14,7 @@ const Card = ({course}) => {
                 </div>
             </div>
 
-            <div>
+            <div className="titleDiv">
                 <p>{course.title}</p>
                 <p>{course.description}</p>
             </div>

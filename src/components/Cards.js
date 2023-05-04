@@ -1,24 +1,24 @@
-import { useEffect } from "react";
 import Card from './Card';
+import './Cards.css';
 
 function Cards({courses}) {
-    let allCourses = [];
+     
     const getCourses = () => { 
+        let allCourses = []; 
         Object.values(courses).forEach((courseCategory) => {
             courseCategory.forEach((course) => {
                 allCourses.push(course);
             })
         })
-        console.log(allCourses);
         return allCourses;
     }
  
 
     return (
-        <div>
-            {getCourses().map((course) => {
-                return <Card key={course.id} course={course}/>
-            })}
+        <div className="cardsDiv">
+            {getCourses().map((course) => (
+                <Card key={course.id} course={course}/>
+            ))}
             
         </div>
     );

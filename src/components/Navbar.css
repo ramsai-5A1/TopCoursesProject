@@ -1,0 +1,13 @@
+.navbar {
+    background-color:darkslateblue;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+}
+
+.navbarContent {
+    color: white;
+    font-size: 3xl;
+    margin: auto;
+    align-items: center;
+}

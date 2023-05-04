@@ -1,0 +1,15 @@
+/* .cardsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+} */
+
+.cardsDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin:0 auto;
+}
